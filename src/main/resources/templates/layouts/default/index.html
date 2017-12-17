@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<title>OMTutor</title>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+</head>
+<body>
+    This is default Layout
+    <div th:replace="layouts/default/header :: header">Header</div>
+    <div th:replace="${view} :: content">Content</div>
+    <div th:replace="layouts/default/footer :: footer"></div>
+</body>
+</html>

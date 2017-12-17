@@ -1,0 +1,32 @@
+<div th:fragment="content">
+  <div id="loginform">
+    <h3 th:text="${error}" ></h3>
+    <h3 th:text="${message}" ></h3>
+    <form th:action="@{/login}" method="POST" name="login" autocomplete="off">
+      <table width="200" border="0">
+        <tbody>
+        <tr>
+          <td th:if="true" >&nbsp;    UserID:</td>
+          <td>&nbsp;
+            <input type="text" name="username" autocomplete="false"/></td>
+        </tr>
+        <tr>
+          <td>&nbsp; Password:</td>
+          <td>&nbsp;
+            <input type="password" name="password" autocomplete="on"/></td>
+        </tr>
+        <tr>
+          <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+          <td><input type="submit" value="submit"/></td>
+          <!--<td><a href="LoginSuccess.html">LoginSuccess/</a></td>-->
+          <!--<td><a href="LoginFailed.html">\LoginFailed</a></td>-->
+          <td>&nbsp;
+            <input type="reset"/></td>
+        </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+  <div id="registerlink"> Don't have UserID? <a href="RegistrationPage.html">Register Here.</a></div>
+</div>
+
