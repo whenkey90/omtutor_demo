@@ -1,5 +1,5 @@
-<div th:fragment="header" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
-    <div id="topnavigation" style="background-color: indianred;">
+<div th:fragment="header">
+    <!--<div id="topnavigation" style="background-color: indianred;">
         <table width="200" border="0">
             <tbody>
             <tr>
@@ -9,5 +9,80 @@
             </tr>
             </tbody>
         </table>
+    </div>-->
+
+    <div id="home" class="header">
+        <!--start-header-->
+        <div class="header-strip">
+            <div class="container">
+                <p class="phonenum">
+                    <a href="/home">OM Tutor</a>
+                </p>
+
+                <div class="social-icons">
+
+                    <div class="main-nav">
+                        <span class="menu"></span>
+                        <div class="top-menu">
+                            <ul class="link-effect-12" id="link-effect-12">
+                                <li class="active"><a href="/home"><span>Home</span></a></li>
+                                <li sec:authorize="!isAuthenticated()"><a href="/feedback"><span>Feedback</span></a></li>
+                                <li sec:authorize="!isAuthenticated()"><a href="/login"><span>Login</span></a></li>
+                                <li sec:authorize="!isAuthenticated()"><a href="/register"><span>Register</span></a></li>
+
+                                <li sec:authorize="isAuthenticated()">
+                                    <a href="/problem"><span>Upload Problem</span></a>
+                                </li>
+
+                                <li sec:authorize="isAuthenticated()">
+                                    <a href="/solution"><span>Upload Solution</span></a>
+                                </li>
+                                <li sec:authorize="isAuthenticated()">
+                                    <form th:action="@{/logout}" method="post">
+                                        <input type="submit" value="Logout"/>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!--
+                                        <ul>
+                                            <li><a style="color:#FFF" href data-toggle="modal" data-target="#myModal">Login</a>
+                                            </li>
+                                            <li><a style="color:#FFF" href="#">Register</a>
+                                            </li>
+                                            <li><a href="#"><i class="facebook"> </i></a>
+                                            </li>
+                                            <li><a href="#"><i class="twitter"> </i></a>
+                                            </li>
+                                            <li><a href="#"><i class="google-plus"> </i></a>
+                                            </li>
+                                            <li><a href="#"><i  class="dribble"> </i></a>
+                                            </li>
+
+                                        </ul>-->
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="header-top">
+
+            <!--start-banner-->
+            <!--<div class="banner">
+
+                <div class="container">
+                    <div id="inner_container">
+
+                        <div id="div_img_wrapper">
+                            <div id="div_img_inner_wrapper">
+                                <div id="div_qtn"><span class="txt-shadow-wht-gray">?</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+        </div>
     </div>
 </div>

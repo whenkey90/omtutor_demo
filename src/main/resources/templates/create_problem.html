@@ -1,0 +1,287 @@
+<div th:fragment="content">
+<div id="error-display" style="display: none;" class="display-none color-red">
+    <strong>Error !</strong> Something went wrong please try again.
+</div>
+
+<div class="flex-container">
+    <div class="tab">
+        <button onclick="App.showContent('textline')">Text</button>
+        <button onclick="App.showContent('controls')">Formula</button>
+        <button onclick="App.showContent('shapes')">Shapes</button>
+        <!--<button class="omt-partial-click" data-url="/getProblem/text" data-container="tab-content" data-callback="appendData" >Text</button>-->
+        <!--<button class="omt-partial-click" data-url="/getProblem/formula" data-container="tab-content" data-callback="appendData" >Formula</button>-->
+        <!--<button class="omt-partial-click" data-url="/getProblem/shapes" data-container="tab-content" data-callback="appendData" >Shapes</button>-->
+    </div>
+
+    <div class="tabcontent textline" style="display:block">
+        <b>Text line: Enter text here (one problem line at a time; press Add line to Problem Composition)</b>
+        <br/>
+        <textarea cols="50" id="textlines"></textarea>
+        <a href="#" id="textact">Add</a>
+        <a href="#" id="resettext">Clear</a>
+        <a href="#" id="delete-text" class="deleteText display-none">Delete</a>
+    </div>
+    <br/>
+    <!--Start Formula-->
+    <div class="tabcontent controls" style="display: none;">
+        <b>Math Formula Here:</b><span id="math-field1"></span>
+        <form>
+            select your keyboardtype:
+            <select class="omt-partial-get omt-partial-on-load" data-url="/mathPage"
+                    data-container="#include-html" data-callback="appendData" name="page">
+                <option value="basic" >Basic Math</option>
+                <option value="algebra">Algebra</option>
+                <option value="calculus">Calculus</option>
+            </select>
+        </form>
+        <div id="include-html"></div>
+        <a href="#" id="addformula">Add</a>
+        <a href="#" id="resetformula">Clear</a>
+        <a href="#" id="delete-formula" class="deleteFormula display-none">Delete</a>
+    </div>
+    <!--End Formule-->
+    <br/>
+    <!--start canvas-->
+    <div class="tabcontent shapes" style="display: none;">
+        <div class="canvas-div" canvas-id="drawing-canvas-1">
+            <table id="table-1">
+                <tr>
+                    <td>
+                        <a href="#" class="f1 color-select" color="red">Red</a> &nbsp;
+                        <a href="#" class="f1 color-select" color="blue">Blue</a> &nbsp;
+                        <a href="#" class="f1 color-select" color="green">Green</a> &nbsp;
+                        <a href="#" class="f1 color-select" color="black">Black</a>
+                    </td>
+                    <td>
+                        <a href="#" class="draw-select" draw-set="FreeHand">Freehand</a> &nbsp;
+                        <a href="#" class="draw-select" draw-set="StraightLines">StraightLines</a> &nbsp;
+                        <a href="#" class="draw-select" draw-set="Rectangles">Rectangles</a> &nbsp;
+                        <a href="#" class="draw-select" draw-set="Circles">Circles</a> &nbsp;
+                        <a href="#" class="draw-select" draw-set="Text" input-text-id="label-text-1" >Text</a>
+                        <input type="text" id="label-text-1" maxlength="9" size="9" placeholder="Enter Text"/>
+                    </td>
+                    <td>
+                        Grid <input type="checkbox" class="grid-box"/>
+                        Single line mode canvas <input type="checkbox" class="single-line-mode-canvas"/>&nbsp;
+                        Auto Resize <input type="checkbox" class="auto-size-canvas"/>&nbsp;
+                        <a href="#" class="clear-canvas">Clear</a> &nbsp;
+                        <a href="#" class="undo-canvas">Undo</a> &nbsp;
+                        <a href="#" class="redo-canvas">Redo</a> &nbsp;
+                    </td>
+                    <td>
+
+                        <a href="#" id="addshape" data-canvas-id="#drawing-canvas-1"
+                           data-container="#problem-display" data-problem-type="PROBLEM" >Add</a>
+                        <!--<a href="#" id="add_strokes" class="btn fl add-strokes" data-problem-sheet="#problem-sheet-1">Add drawing only</a>&nbsp;&nbsp;-->
+                        <!--<a href="#" id="add_canvas" class="btn fl add-canvas" data-problem-sheet="#problem-sheet-1">Add image (includes drawings)</a>-->
+                    </td>
+                </tr>
+            </table>
+            <div id="canvas-1" style="border:1px solid #000000;display:block;max-width: 50%;" >
+                <canvas class="drawing-canvas" id="drawing-canvas-1"></canvas>
+            </div>
+            <!--Upload Image-->
+            <!--<div>
+                <form class="img-upload" name="img_upload" method="post" enctype="multipart/form-data" target="hidden_frame"
+                      data-image-info="#image-info-1" data-response-text="#response-text-1"
+                      data-check-result="#check-result-1" >
+                    <label>Scan Problem using your device camera or select a picture already taken</label>
+                    <p>
+                        <input type="hidden" name="file_id" value="file-select-1"/>
+                        <input type="file" name="photo" id="file-select-1"/>
+                    </p>
+                    <p>
+                        <label for="SESSION_UID">select Student Name: </label>
+                        <select name="SESSION_UID" id="select_student">
+                            <option value="sumanth" selected="selected">Sumanth</option>
+                            <option value="reddy">Reddy</option>
+                            <option value="srihitha">Srihitha</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="SESSION_GID">Your school is: </label>
+                        <select name="SESSION_GID" id="select_school">
+                            <option value="general" selected="selected">General</option>
+                            <option value="nysmith">Nysmith</option>
+                            <option value="other">Srihitha's School</option>
+                        </select>
+                    </p>
+
+                    <label for="whattodo">What do you want to do with this image? </label>
+                    <br/>
+                    <input type="radio" id="remove_image" name="whattodo" value="remove_image"/>
+                    Remove this image from above display area
+                    <br/>
+                    <input type="radio" id="for_preview" name="whattodo" value="for_preview" checked="true"/>
+                    Preview Only
+                    <br/>
+                    <input type="radio" id="as_image" name="whattodo" value="as_image"/>
+                    Upload Image to the server
+                    <br/>
+                    <input type="radio" id="as_ocr_normal" name="whattodo" value="as_ocr_normal"/>
+                    Recognize (if recognizable, converts to formulas and text)
+                    <br/>
+                    <button type="submit" id="submit_button" name="submit_button" value="submit">
+                        Submit
+                    </button>
+
+                    <iframe name='hidden_frame' id='hidden_frame' style='display:none'></iframe>
+                </form>
+            </div>-->
+
+            <div class="app_eq">
+                <div class="result" id="image-info-1"></div>
+            </div>
+
+            <div class="app eq">
+                <div class="result" id="response-text-1"></div>
+            </div>
+
+            <div class="app eq">
+                <div class="result" id="check-result-1"></div>
+            </div>
+
+            <div class="app eq">
+                <label for="problem-sheet-1"> Each time you say 'Add to the problem', canvas content is resized and appended below.</label>
+                <div id="problem-sheet-1" name="problem-sheet">
+                    <!-- This area will keep growing with lines added -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Old Canvas-->
+    <!--<div class="tabcontent shapes" style="display: none;">
+        <b>Geometric Shape Editor:</b>
+        <div class="canvas-div" canvas-id="drawing-canvas">
+            <table>
+                <tr>
+                    <td>
+                        <a href="#" id="Red" class="fl">Red</a> &nbsp;
+                        <a href="#" id="Blue" class="fl">Blue</a> &nbsp;
+                        <a href="#" id="Green" class="fl">Green</a> &nbsp;
+                        <a href="#" id="Black" class="fl">Black</a>
+                    </td>
+                    <td>
+                        <a href="#" id="freehand" class="fl">Freehand</a> &nbsp;
+                        <a href="#" id="straight_lines" class="fl">StraightLines</a> &nbsp;
+                        <a href="#" id="drawArcs" class="fl">Rectangles</a> &nbsp;
+                        <a href="#" id="drawCircles" class="fl">Circles</a> &nbsp;
+                        <a href="#" id="drawText" class="fl">Text</a>
+                        <input type="text" id="labelText" maxlength="9" size="9" placeholder="Enter Text"/>
+                        <input type="checkbox" id="gridBox"/>
+                    </td>
+                </tr>
+            </table>
+            <div id="canvas" style="border:1px solid #000000;display:block;max-width: 50%;">
+                <canvas class="drawing-canvas" id="drawing-canvas"></canvas>
+            </div>
+            &lt;!&ndash;changes start&ndash;&gt;
+            <div class="boxes">
+                <a href="#" id="clear" class="btn fl">clear</a>
+                <a href="#" id="undo" class="btn fl">undo</a>
+                <a href="#" id="redo" class="btn fl">redo</a>
+                &nbsp; Grid:
+                <input type="checkbox" id="gridBox"/>
+                &nbsp; Single Line Mode:
+                <input type="checkbox" id="line_mode"/>
+                &nbsp; Auto-Resize:
+                <input type="checkbox" id="auto_resize"/>
+                <br/>
+                <a href="#" id="add_strokes" class="btn fl">Add drawing only</a>
+                &nbsp;
+                &nbsp;
+                <a href="#" id="add_canvas" class="btn fl">Add image (includes drawings)</a>
+            </div>
+            &lt;!&ndash;changes end&ndash;&gt;
+            <a href="#" id="addshape" data-canvas-id="#drawing-canvas"
+               data-container="#problem-display" data-problem-type="PROBLEM" >Add</a>
+            <a href="#" id="update-shape" class="display-none" data-pos="0" >Update</a>
+            <a href="#" id="resetshape">Clear</a>
+            <a href="#" id="delete-shape" class="deleteShape display-none">Delete</a>
+            <br/>
+        </div>
+    </div>-->
+    <!--end canvas-->
+
+</div>
+<br/>
+<b> Use your camera</b>
+<form id="img_upload" name="img_upload" action="https://omtutor.com/cgi-bin/Level9/callocrmath" method="post" enctype="multipart/form-data" target="hidden_frame">
+    <label>Scan Problem using your device camera or select a picture already taken</label>
+    <p>
+        <input type="file" name="photo" id="file_select"/>
+    </p>
+    <p>
+        <label for="SESSION_UID">select Student Name: </label>
+        <select name="SESSION_UID" id="select_student">
+            <option value="sumanth" selected="selected">Sumanth</option>
+            <option value="reddy">Reddy</option>
+            <option value="srihitha">Srihitha</option>
+        </select>
+    </p>
+    <p>
+        <label for="SESSION_GID">Your school is: </label>
+        <select name="SESSION_GID" id="select_school">
+            <option value="general" selected="selected">General</option>
+            <option value="nysmith">Nysmith</option>
+            <option value="other">Srihitha's School</option>
+        </select>
+    </p>
+
+    <button type="submit" id="as_image">as_image</button>
+    <iframe name='hidden_frame' id='hidden_frame' style='display:none'></iframe>
+</form>
+<p>
+<div class="app eq">
+    <div class="result" id="responseText"></div>
+</div><!-- app -->
+</p>
+<p>
+    Your Image will be displayed below if it is uploaded successfully.
+<div>
+    <img src="" id="image_problem"/>
+</div>
+</p>
+
+
+<p>
+    <code id="latex1" class="display-none"></code>
+</p>
+<p>
+    <code id="result-mathml" class="display-none"></code>
+</p>
+<p>
+    <span id="static-math" class="display-none"></span>
+</p>
+
+<hr/>
+
+<p>
+    <b>Problem: Text lines, formulas, or geometric shapes can be added to the problem, one at a time, until complete problem is composed. </b><br/>
+<div id="problem-display">
+</div>
+</p>
+<div class="rowcls">
+    <button id="submit-problem" class="btncls">submit</button>
+</div>
+<p>
+    <b>Answers: This is for displaying answers for your problems</b>
+<div id="answer-display">
+</div>
+</p>
+
+    <script src="js/myscript.js"></script>
+    <script src="js/canvas_test.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            App.init();
+            CanvasApp.initJSketchCanvas();
+        });
+    </script>
+        <script type="text/javascript">
+      window.MathJax = {}
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML-full"></script>
+
+</div>

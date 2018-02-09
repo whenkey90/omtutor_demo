@@ -1,0 +1,273 @@
+@charset "utf-8";
+.flex-container .tab button {
+	display: block;
+	float: left;
+	padding: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+	height: 35%;
+	/* [disabled]width: 35%; */
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+.flex-container .prb_area {
+	display: block;
+	float: left;
+	clear: both;
+	width: 100%;
+	margin: 10px;
+}
+.flex-container #prb_select {
+	display: block;
+	clear: both;
+	float: left;
+	width: 100%;
+	background-color: #FFC;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #09F;
+}
+.flex-container .formula_area {
+	display: block;
+	float: left;
+	height: 50px;
+	width: 80%;
+	border: 1px solid #09F;
+	background-color: #FFF;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	clear: both;
+}
+.flex-container #prb_select #prb_formula .tabcontent.controls #prb_formula_div {
+	display: block;
+	clear: both;
+	float: left;
+	width: 100%;
+}
+
+.flex-container #prb_select #prb_shapes .tabcontent.shapes #canvas {
+	background-color: #FFF;
+	display: block;
+	max-width: 23%;
+	border: 1px solid #09F;
+}
+
+.button_add_clear {
+	display: block;
+	height: 25px;
+	width: 100px;
+	border: 1px solid #09F;
+	text-align: center;
+	background-color: #0F6;
+}
+#div_img_upload {
+	display: block;
+	float: left;
+	border: 1px solid #09F;
+	padding: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+#prb_display {
+	display: block;
+	padding: 5px;
+	clear: left;
+	float: left;
+	width: 80%;
+	margin-right: 10px;
+	margin-left: 10px;
+	color: #C00;
+	border: 1px solid #09F;
+}
+#prb_img_submit {
+	display: block;
+	padding: 5px;
+	clear: left;
+	float: left;
+	width: 100%;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+#prb_display #ans_display {
+	display: block;
+	padding: 5px;
+	float: left;
+	/* [disabled]width: 80%; */
+	border: 1px solid #09F;
+	margin: 10px;
+	height: 80px;
+	background-color: #FFC;
+}
+#file_upload {
+	display: block;
+	float: left;
+	border: 1px solid #09F;
+	padding: 5px;
+}
+#home .header-top .banner .container #inner_container #div_level0 {
+	display: none;
+	width: 100%;
+	background-color: #f8f8f8;
+	padding: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#home .header-top .banner .container #inner_container #div_level2 {
+	display: none;
+	width: 98%;
+	/* [disabled]height: 500px; */
+	background-color: #FFC;
+	padding: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#home .header-top .banner .container #inner_container #div_level4 {
+	display: none;
+	width: 98%;
+	/* [disabled]height: 500px; */
+	background-color: #09F;
+	padding: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#home .header-top .banner .container #inner_container #div_level8 {
+	display: none;
+	width: 98%;
+	/* [disabled]height: 500px; */
+	background-color: #FFC;
+	padding: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+@charset "utf-8";
+#home .header-top .banner .container #inner_container #login_wrapper #login_form p input {
+	background-color: #FFF;
+	width: 80%;
+	margin: 0px 0px 15px 0px;
+	padding: 0px;
+}
+#home .header-top .banner .container #inner_container #login_wrapper {
+	display: block;
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #F60;
+	padding: 10px;
+}
+#home .header-top .banner .container #inner_container #login_wrapper #login_form p label {
+	color: #036;
+	margin: 0px;
+	padding: 0px;
+	width: 40%;
+	display: block;
+	text-align: center;
+}
+#home .header-top .banner .container #inner_container #reg_form_wrapper {
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	background-color: #F60;
+	padding: 10px;
+}
+#home .header-top .banner .container #inner_container #reg_form_wrapper #reg_form p input {
+	background-color: #FFF;
+	width: 40%;
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+}
+#home .header-top .banner .container #inner_container #reg_form_wrapper #reg_form p label {
+	display: block;
+	width: 40%;
+	text-align: left;
+	margin-right: auto;
+	margin-left: auto;
+	color: #036;
+}
+#home .header-top .banner .container #inner_container #reg_form_wrapper #reg_form  select {
+	display: block;
+	width: 40%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 10px;
+	color: #036;
+}
+#home .header-top .banner .container #inner_container #div_feed_wrapper #form1 label {
+	display: block;
+	padding: 0px;
+	width: 40%;
+	text-align: center;
+	color: #036;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#home .header-top .banner .container #inner_container #div_feed_wrapper #form1 input {
+	background-color: #FFF;
+	padding: 0px;
+	width: 40%;
+	margin-bottom: 10px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+#home .header-top .banner .container #inner_container #div_feed_wrapper #form1  #fb_feedback {
+	background-color: #FFF;
+	margin: 0px;
+	padding: 0px;
+	width: 40%;
+}
+#home .header-top .banner .container #inner_container #div_feed_wrapper #form1 {
+	background-color: #F60;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+}
+#home .header-top .banner .container #inner_container #div_feed_wrapper #form1 p #fb_type {
+	color: #036;
+}
+#home .header-top .banner .container #login_user_info_bar #div_user_info {
+	display: block;
+	float: left;
+}
+#home .header-top .container #login_user_info_bar #div_user_info {
+	display: block;
+	float: left;
+}
+#home .header-top .banner .container #inner_container #inner_container #login_wrapper #login_form #login_submit {
+	display: block;
+	width: 80%;
+	background-color: #FFF;
+	margin-right: auto;
+	margin-left: auto;
+}
+#home .header-top .banner .container #inner_container #level0 {
+	display: block;
+	width: 98%;
+	margin-right: auto;
+	margin-left: auto;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	background-color: #FFF;
+	height: 550px;
+}
+
+.txt-shadow-wht-gray {
+	color: #F60;
+    text-shadow: 2px 2px 4px #000000;
+}
+#home .header-top .banner .container #inner_container #div_level2 {
+	
+	width: 96%;
+}
+

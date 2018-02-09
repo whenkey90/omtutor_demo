@@ -1,0 +1,55 @@
+<div th:fragment="content" >
+    <div class="banner">
+        <div class="container">
+            <div id="inner_container">
+                <div>Login to your account</div>
+                <div id="login_wrapper">
+                    <h3 th:text="${message}"></h3>
+                    <form action="/register" id="reg_form" name="reg_form" method="POST" th:object="${userAccount}" onsubmit="return passCheck();">
+                        <div>New User Registration Form</div>
+                        <p>
+                            <label for="stdn_name"> Name:</label>
+                            <input type="text" th:field="*{name}" id="stdn_name" />
+                        </p>
+                        <p>
+                            <label for="stdn_mail">E-Mail: </label>
+                            <input type="text" th:field="*{email}" id="stdn_mail" />
+                        </p>
+                        <p>
+                            <label for="stdn_pwd">Password: </label>
+                            <input type="password" th:field="*{password}" id="stdn_pwd" />
+                        </p>
+                        <p>
+                            <label for="stdn_pwd">Confirm Password: </label>
+                            <input type="password" name="stdn_pwd_c" id="stdn_pwd_c" />
+                        </p>
+                        <p>
+                            <label for="select_type">You are a: </label>
+                            <select th:field="*{type}" id="select_type">
+                                <option value="Student" selected="selected">Student</option>
+                                <option value="Teacher">Teacher</option>
+                                <option value="Parent">Parent</option>
+                            </select>
+                        </p>
+                        <p><label for="select_type">Enter your group name:</label>
+                            <input type="text" id="select_grp" th:field="*{groupName}" />
+                        </p>
+                        <p>
+                            <label for="stdn_phone"> Phone  (Optional): </label>
+                            <input type="text" th:field="*{phone}" id="stdn_phone" />
+                        </p>
+                        <p>
+                            <input type="submit" name="stdn_submit" id="stdn_submit" value="Submit" />
+                        </p>
+                        <p>
+                            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+                            <input type="reset" name="stdn_reset" id="stdn_reset" value="Reset" />
+                        </p>
+                        <input type="hidden" name="MM_insert" value="reg_form"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

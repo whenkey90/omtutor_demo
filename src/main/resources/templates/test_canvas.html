@@ -1,0 +1,216 @@
+<div th:fragment="content">
+<div>
+    <b>Geometric Shape Editor:</b>
+    <div class="canvas-div" canvas-id="drawing-canvas-1">
+        <table id="table-1">
+            <tr>
+                <td>
+                    <a href="#" class="f1 color-select" color="red">Red</a> &nbsp;
+                    <a href="#" class="f1 color-select" color="blue">Blue</a> &nbsp;
+                    <a href="#" class="f1 color-select" color="green">Green</a> &nbsp;
+                    <a href="#" class="f1 color-select" color="black">Black</a>
+                </td>
+                <td>
+                    <a href="#" class="draw-select" draw-set="FreeHand">Freehand</a> &nbsp;
+                    <a href="#" class="draw-select" draw-set="StraightLines">StraightLines</a> &nbsp;
+                    <a href="#" class="draw-select" draw-set="Rectangles">Rectangles</a> &nbsp;
+                    <a href="#" class="draw-select" draw-set="Circles">Circles</a> &nbsp;
+                    <a href="#" class="draw-select" draw-set="Text" input-text-id="label-text-1" >Text</a>
+                    <input type="text" id="label-text-1" maxlength="9" size="9" placeholder="Enter Text"/>
+                </td>
+                <td>
+                    Grid <input type="checkbox" class="grid-box"/>
+                    Single line mode canvas <input type="checkbox" class="single-line-mode-canvas"/>&nbsp;
+                    Auto Resize <input type="checkbox" class="auto-size-canvas"/>&nbsp;
+                    <a href="#" class="clear-canvas">Clear</a> &nbsp;
+                    <a href="#" class="undo-canvas">Undo</a> &nbsp;
+                    <a href="#" class="redo-canvas">Redo</a> &nbsp;
+                </td>
+                <td>
+                    <a href="#" id="add_strokes" class="btn fl add-strokes" data-problem-sheet="#problem-sheet-1">Add drawing only</a>&nbsp;&nbsp;
+                    <a href="#" id="add_canvas" class="btn fl add-canvas" data-problem-sheet="#problem-sheet-1">Add image (includes drawings)</a>
+                </td>
+            </tr>
+        </table>
+        <div id="canvas-1" >
+            <canvas class="drawing-canvas" id="drawing-canvas-1" width="500" height="200"></canvas>
+        </div>
+        <div>
+            <form class="img-upload" name="img_upload" method="post" enctype="multipart/form-data" target="hidden_frame"
+                    data-image-info="#image-info-1" data-response-text="#response-text-1"
+                    data-check-result="#check-result-1" >
+                <label>Scan Problem using your device camera or select a picture already taken</label>
+                <p>
+                    <input type="hidden" name="file_id" value="file-select-1"/>
+                    <input type="file" name="photo" id="file-select-1"/>
+                </p>
+                <p>
+                    <label for="SESSION_UID">select Student Name: </label>
+                    <select name="SESSION_UID" id="select_student">
+                        <option value="sumanth" selected="selected">Sumanth</option>
+                        <option value="reddy">Reddy</option>
+                        <option value="srihitha">Srihitha</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="SESSION_GID">Your school is: </label>
+                    <select name="SESSION_GID" id="select_school">
+                        <option value="general" selected="selected">General</option>
+                        <option value="nysmith">Nysmith</option>
+                        <option value="other">Srihitha's School</option>
+                    </select>
+                </p>
+
+                <label for="whattodo">What do you want to do with this image? </label>
+                <br/>
+                <input type="radio" id="remove_image" name="whattodo" value="remove_image"/>
+                Remove this image from above display area
+                <br/>
+                <input type="radio" id="for_preview" name="whattodo" value="for_preview" checked="true"/>
+                Preview Only
+                <br/>
+                <input type="radio" id="as_image" name="whattodo" value="as_image"/>
+                Upload Image to the server
+                <br/>
+                <input type="radio" id="as_ocr_normal" name="whattodo" value="as_ocr_normal"/>
+                Recognize (if recognizable, converts to formulas and text)
+                <br/>
+                <button type="submit" id="submit_button" name="submit_button" value="submit">
+                    Submit
+                </button>
+
+                <iframe name='hidden_frame' id='hidden_frame' style='display:none'></iframe>
+            </form>
+        </div>
+
+        <div class="app_eq">
+            <div class="result" id="image-info-1"></div>
+        </div>
+
+        <div class="app eq">
+            <div class="result" id="response-text-1"></div>
+        </div>
+
+        <div class="app eq">
+            <div class="result" id="check-result-1"></div>
+        </div>
+
+        <div class="app eq">
+            <label for="problem-sheet-1"> Each time you say 'Add to the problem', canvas content is resized and appended below.</label>
+            <div id="problem-sheet-1" name="problem-sheet">
+                <!-- This area will keep growing with lines added -->
+            </div>
+        </div>
+    </div>
+    <div class="canvas-div" canvas-id="drawing-canvas-2">
+        <table id="table-2">
+            <tr>
+                <td>
+                    <a href="#" class="color-select" color="red">Red</a> &nbsp;
+                    <a href="#" class="color-select" color="blue">Blue</a> &nbsp;
+                    <a href="#" class="color-select" color="green">Green</a> &nbsp;
+                    <a href="#" class="color-select" color="black">Black</a>
+                </td>
+                <td>
+                    <a href="#" class="draw-select" draw-set="FreeHand">Freehand</a> &nbsp;
+                    <a href="#" class="draw-select" draw-set="StraightLines">StraightLines</a> &nbsp;
+                    <a href="#" class="draw-select" draw-set="Rectangles">Rectangles</a> &nbsp;
+                    <a href="#" class="draw-select" draw-set="Circles">Circles</a> &nbsp;
+                    <a href="#" class="draw-select" draw-set="Text" input-text-id="label-text-2">Text</a>
+                    <input type="text" id="label-text-2" maxlength="9" size="9" placeholder="Enter Text"/>
+                </td>
+                <td>
+                    Grid <input type="checkbox" class="grid-box"/>
+                    Single line mode canvas <input type="checkbox" class="single-line-mode-canvas"/>&nbsp;
+                    Auto Resize <input type="checkbox" class="auto-size-canvas"/>&nbsp;
+                    <a href="#" class="clear-canvas">Clear</a> &nbsp;
+                    <a href="#" class="undo-canvas">Undo</a> &nbsp;
+                    <a href="#" class="redo-canvas">Redo</a> &nbsp;
+                </td>
+
+                <td>
+                    <a href="#" class="btn fl add-strokes" data-problem-sheet="#problem-sheet-2">Add drawing only</a>&nbsp;&nbsp;
+                    <a href="#" class="btn fl add-canvas" data-problem-sheet="#problem-sheet-2">Add image (includes drawings)</a>
+                </td>
+            </tr>
+        </table>
+        <div id="canvas">
+            <canvas class="drawing-canvas" id="drawing-canvas-2" width="500" height="200"></canvas>
+        </div>
+
+        <div>
+            <form id="img_upload" class="img-upload" name="img_upload" method="post" enctype="multipart/form-data" target="hidden_frame"
+                  data-image-info="#image-info-2" data-response-text="#response-text-2"
+                  data-check-result="#check-result-2" >
+                <label>Scan Problem using your device camera or select a picture already taken</label>
+                <p>
+                    <input type="hidden" name="file_id" value="file-select-2"/>
+                    <input type="file" name="photo" id="file-select-2"/>
+                </p>
+                <p>
+                    <label for="SESSION_UID">select Student Name: </label>
+                    <select name="SESSION_UID" id="select_student">
+                        <option value="sumanth" selected="selected">Sumanth</option>
+                        <option value="reddy">Reddy</option>
+                        <option value="srihitha">Srihitha</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="SESSION_GID">Your school is: </label>
+                    <select name="SESSION_GID" id="select_school">
+                        <option value="general" selected="selected">General</option>
+                        <option value="nysmith">Nysmith</option>
+                        <option value="other">Srihitha's School</option>
+                    </select>
+                </p>
+
+                <label for="whattodo">What do you want to do with this image? </label>
+                <br/>
+                <input type="radio" id="remove_image" name="whattodo" value="remove_image"/>
+                Remove this image from above display area
+                <br/>
+                <input type="radio" id="for_preview" name="whattodo" value="for_preview" checked="true"/>
+                Preview Only
+                <br/>
+                <input type="radio" id="as_image" name="whattodo" value="as_image"/>
+                Upload Image to the server
+                <br/>
+                <input type="radio" id="as_ocr_normal" name="whattodo" value="as_ocr_normal"/>
+                Recognize (if recognizable, converts to formulas and text)
+                <br/>
+                <button type="submit" id="submit_button" name="submit_button" value="submit">
+                    Submit
+                </button>
+
+                <iframe name='hidden_frame' id='hidden_frame' style='display:none'></iframe>
+            </form>
+        </div>
+
+        <div class="app_eq">
+            <div class="result" id="image-info-2"></div>
+        </div>
+
+        <div class="app eq">
+            <div class="result" id="response-text-2"></div>
+        </div>
+
+        <div class="app eq">
+            <div class="result" id="check-result-2"></div>
+        </div>
+
+        <div class="app eq">
+            <label for="problem-sheet-2"> Each time you say 'Add to the problem', canvas content is resized and appended below.</label>
+            <div id="problem-sheet-2" name="problem-sheet">
+                <!-- This area will keep growing with lines added -->
+            </div>
+        </div>
+    </div>
+    <br/>
+</div>
+    <script src="js/canvas_test.js"></script>
+    <script>
+	$(document).ready(function(){
+      CanvasApp.initJSketchCanvas();
+	});
+</script>
+</div>

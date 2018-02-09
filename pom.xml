@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>omtutor</artifactId>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<name>Om Tutor</name>
 	<description>Om Tutor</description>
 	<version>1.0</version>
@@ -13,9 +13,11 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.4.2.RELEASE</version>
+		<relativePath />
 	</parent>
 
 	<properties>
+		<start-class>com.mathtutor.SpringBootWebApplication</start-class>
 		<java.version>1.8</java.version>
 	</properties>
 
@@ -38,11 +40,22 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-
 		<dependency>
-			<groupId>postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<version>9.1-901.jdbc4</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<!--<scope>provided</scope>-->
+		</dependency>
+
+		<!--Postgress-->
+		<!--<dependency>-->
+			<!--<groupId>postgresql</groupId>-->
+			<!--<artifactId>postgresql</artifactId>-->
+			<!--<version>9.1-901.jdbc4</version>-->
+		<!--</dependency>-->
+		<!--mysql-->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
 
 		<!-- hot swapping, disable cache for template, enable live reload -->
@@ -58,6 +71,21 @@
 			<artifactId>bootstrap</artifactId>
 			<version>3.3.7</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.thymeleaf.extras/thymeleaf-extras-springsecurity4 -->
+		<dependency>
+			<groupId>org.thymeleaf.extras</groupId>
+			<artifactId>thymeleaf-extras-springsecurity4</artifactId>
+			<version>2.1.2.RELEASE</version>
+		</dependency>
+
+		<!-- Tools -->
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.2</version>
+		</dependency>
+
 
 	</dependencies>
 	<build>

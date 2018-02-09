@@ -4,11 +4,39 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:700' rel='stylesheet' type='text/css'/>
+    <link href="css/login-css.css" rel="stylesheet" type="text/css"/>
+    <link href="css/my_styles.css" rel="stylesheet" type="text/css"/>
+
+    <!--<link rel="stylesheet" type="text/css" href="style.css">-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:700' rel='stylesheet' type='text/css'/>
+
+    <!--Math Quill-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/console.js"></script>
+    <script type="text/javascript" src="./js/jsketch.js"></script>
+    <script type="text/javascript" src="./js/jquery.sketchable.js"></script>
+    <script type="text/javascript" src="./js/jquery.sketchable.memento.js"></script>
+    <!--<script src="./js/bootstrap.js"></script>-->
+    <!--<script src="./js/bootstrap.min.js"></script>-->
+    <link rel="stylesheet" href="css/mathquill.css"/>
+    <!--<script src="./js/jsen.js"></script>-->
+    <script src="./js/mathquill.js"></script>
+    <!--<script src="./js/mathjax.js"></script>-->
+    <script src="./js/TexZilla-min.js"></script>
+
 </head>
 <body>
-    This is default Layout
     <div th:replace="layouts/default/header :: header">Header</div>
     <div th:replace="${view} :: content">Content</div>
-    <div th:replace="layouts/default/footer :: footer"></div>
+    <!--<div th:replace="layouts/default/footer :: footer"></div>-->
 </body>
 </html>

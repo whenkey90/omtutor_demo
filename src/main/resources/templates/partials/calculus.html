@@ -1,0 +1,71 @@
+<div th:fragment="content">
+
+    <h1>Calculus Math Code</h1>
+    <div class="keyboard">
+
+        <div class="keypad">
+            <button class="btn btn-default char" data-char="(">(</button>
+            <button class="btn btn-default char" data-char=")">)</button>
+            <button class="btn btn-default char" data-char="[">[</button>
+            <button class="btn btn-default char" data-char="]">]</button>
+            <button class="btn btn-default char" data-char="sqrt">√</button>
+
+        </div>
+        <div class="keypad">
+            <button class="btn btn-default char" data-char="alpha">α</button>
+            <button class="btn btn-default char" data-char="delta">δ</button>
+            <button class="btn btn-default char" data-char="gamma">γ</button>
+            <button class="btn btn-default char" data-char="epsilon">ϵ</button>
+            <button class="btn btn-default char" data-char="sqrt">√</button>
+
+        </div>
+        <div class="keypad">
+            <button class="btn btn-default char" data-char="power">^</button>
+            <button class="btn btn-default char" data-char="lt" >&LT;</button>
+            <button class="btn btn-default char" data-char="gt">&GT;</button>
+            <button class="btn btn-default char" data-char="{">{</button>
+            <button class="btn btn-default char" data-char="}">}</button>
+            <button class="btn btn-default backspace" data-char="backspace">c</button>
+        </div>
+        <div class="keypad">
+            <button class="btn btn-default char" data-char="7">7</button>
+            <button class="btn btn-default char" data-char="8" >8</button>
+            <button class="btn btn-default char" data-char="9">9</button>
+            <button class="btn btn-default char" data-char="frac">/</button>
+            <button class="btn btn-default char" data-char="le">&le;</button>
+            <button class="btn btn-default char" data-char="ge">&ge;</button>
+        </div>
+        <div class="keypad">
+            <button class="btn btn-default char" data-char="4">4</button>
+            <button class="btn btn-default char" data-char="5" >5</button>
+            <button class="btn btn-default char" data-char="6">6</button>
+            <button class="btn btn-default char" data-char="cdot">.</button>
+            <button class="btn btn-default char" data-char="plusminus">pm</button>
+            <button class="btn btn-default char" data-char="minusplus">mp</button>
+        </div>
+        <div class="keypad">
+            <button class="btn btn-default char" data-char="1">1</button>
+            <button class="btn btn-default char" data-char="2" >2</button>
+            <button class="btn btn-default char" data-char="3">3</button>
+            <button class="btn btn-default char" data-char="0">0</button>
+            <button class="btn btn-default char" data-char="pi">pi</button>
+            <button class="btn btn-default char" data-char="mid">∣</button>
+        </div>
+        <div class="keypad">
+            <button class="btn btn-default char" data-char="+">+</button>
+            <button class="btn btn-default char" data-char="-" >-</button>
+            <button class="btn btn-default char" data-char="*">*</button>
+            <button class="btn btn-default char" data-char="div">÷</button>
+            <button class="btn btn-default char" data-char="=">=</button>
+            <button class="btn btn-default char" data-char="comma">,</button>
+        </div>
+        <div class="keypad">
+            <button class="btn btn-default space" data-char="space">space</button>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            App.manageKeys();
+        });
+    </script>
+</div>

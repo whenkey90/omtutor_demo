@@ -1,0 +1,130 @@
+@charset "UTF-8";
+.TabbedPanels {
+	overflow: hidden;
+	margin: 0;
+	padding: 0px;
+	clear: none;
+	width: 100%; 
+}
+
+.TabbedPanelsTabGroup {
+	margin: 0px;
+	padding: 0px;
+}
+
+.TabbedPanelsTab {
+	position: relative;
+	top: 1px;
+	padding: 10px 10px;
+	background-color: #f8f8f8;
+	list-style: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	cursor: pointer;
+	font-size: 1em;
+	color: #333;
+	border-bottom: solid 1px #ebebeb;
+	/* margin: 0px 1px 0px 0px; */
+	/* border-left: solid 1px #CCC; */	
+	/* border-top: solid 1px #999; */
+	/* border-right: solid 1px #999; */	
+	/* font-weight: bold; */
+	/* float: left; */	
+}
+
+.TabbedPanelsTabHover {
+	background-color: #006699;
+	color: #fff;
+	border-right: 3px solid #fff;
+}
+
+.TabbedPanelsTabSelected {
+	background-color: #006699;
+	/* border-bottom: 1px solid #EEE; */
+	color: #fff;
+	outline: none;
+	border-right: 3px solid #fff;
+}
+
+.TabbedPanelsTab a {
+	color: black;
+	text-decoration: none;
+}
+
+.TabbedPanelsContentGroup {
+	clear: both;
+	/* border-left: solid 1px #CCC;
+	border-bottom: solid 1px #CCC;
+	border-top: solid 1px #999;
+	border-right: solid 1px #999; */
+	border: 1px solid #ebebeb;
+	background-color: #f8f8f8;
+}
+
+.TabbedPanelsContent {
+	overflow: hidden;
+	padding: 4px;
+}
+
+.TabbedPanelsContentVisible {
+}
+
+.VTabbedPanels {
+	overflow: hidden;
+	zoom: 1;
+}
+
+.VTabbedPanels .TabbedPanelsTabGroup {
+	float: left;
+	width: 10em;
+	height: 20em;
+	background-color: #EEE;
+	position: relative;
+	border-top: solid 1px #999;
+	border-right: solid 1px #999;
+	border-left: solid 1px #CCC;
+	border-bottom: solid 1px #CCC;
+}
+
+.VTabbedPanels .TabbedPanelsTab {
+	float: none;
+	margin: 0px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+.VTabbedPanels .TabbedPanelsTabSelected {
+	background-color: #EEE;
+	border-bottom: solid 1px #999;
+}
+
+.VTabbedPanels .TabbedPanelsContentGroup {
+	clear: none;
+	float: left;
+	padding: 0px;
+	width: 30em;
+	height: 20em;
+}
+
+/* Styles for Printing */
+@media print {
+.TabbedPanels {
+	overflow: visible !important;
+}
+.TabbedPanelsContentGroup {
+	display: block !important;
+	overflow: visible !important;
+	height: auto !important;
+}
+.TabbedPanelsContent {
+	overflow: visible !important;
+	display: block !important;
+	clear:both !important;
+}
+.TabbedPanelsTab {
+	 overflow: visible !important;
+	 display: block !important;
+	 clear:both !important;
+}
+}

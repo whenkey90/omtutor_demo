@@ -1,13 +1,56 @@
 <div th:fragment="header">
-    <div id="topnavigation" style="background-color: lightblue;">
-        <table width="200" border="0">
-            <tbody>
-            <tr>
-                <td><a href="/home">Home</a></td>
-                <td><a href="/about">About</a></td>
-                <td><a href="/contactUs">Contact Us</a></td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" data-target="#navbarCollapse"
+                        data-toggle="collapse" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/home" class="navbar-brand">Om Tutor</a>
+            </div>
+
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/home">
+                            <i class="fa fa-home m-r-5" aria-hidden="true"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="feedback.html">
+                            <i class="fa fa-thumbs-o-up m-r-5" aria-hidden="true"></i>
+                            Feedback
+                        </a>
+                    </li>
+                    <li class="dropdown level-dropdown" style="position: absolute;">
+							<span>
+								<a href="#" data-toggle="dropdown"
+                                   class="dropdown-toggle user-logout-btn">
+                                    <i class="fa fa-user-circle-o f-35" aria-hidden="true"></i>
+                                    <b class="caret"></b>
+                                </a>
+								<ul class="dropdown-menu">
+                                    <li>
+                                        <a href="setting.html">
+                                            <i class="fa fa-cogs m-r-5" aria-hidden="true"></i>
+                                            Setting
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://omtutor.com/stdnpage.php?doLogout=true&amp;regn_email=a@a&amp;grp_id=stdn_grp">
+                                            <i class="fa fa-sign-out m-r-5" aria-hidden="true"></i>
+                                            Logout
+                                        </a>
+                                    </li>
+                                </ul>
+							</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </div>

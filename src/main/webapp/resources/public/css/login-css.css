@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background-color:#eeeff3;
+	text-align:center
+}
+#main{
+	position: relative;
+	margin-top: 15px;
+}
+
+#first{
+	margin-top: 0;
+	background-color: #fff;
+	border: 1px solid #000;
+	border-radius: 5;
+	position: absolute;
+	left: 50%;
+	margin-left: -180px;
+	top: 0;
+	width: 250px;
+	padding-top: 28px;
+	padding-right: 25px;
+	padding-bottom: 28px;
+	padding-left: 25px;
+}
+#second{
+	width:250px;
+	margin-top:0;
+	padding:28px 25px;
+	background-color:#fff;
+	display:none;
+	border:1px solid #000;
+	border-radius:5;
+	position:absolute;
+	left:50%;
+	margin-left:-180px;
+	top:0
+}
+#third{
+	width:250px;
+	margin-top:0;
+	padding:28px 25px;
+	background-color:#fff;
+	display:none;
+	border:1px solid #000;
+	border-radius:5;
+	position:absolute;
+	left:50%;
+	margin-left:-180px;
+	top:0
+}
+h3{
+	margin-top:0
+}
+
+a{
+text-decoration:none;
+color:#6495ed
+}
+p#two{
+margin-bottom:0
+}
+#main form input {
+	height: 35px;
+	width: 200px;
+}
+#main #third #form h3 span {
+	display: block;
+	margin: 15px 0px 0px 0px;
+	padding: 0px;
+}
+#home .header-top .banner .container #inner_container #TabbedPanels1 .TabbedPanelsContentGroup .TabbedPanelsContent.TabbedPanelsContentVisible form #div_taketest #teacher_code {
+	width: 100px;
+	height: 35px;
+	background-color: #FFF;
+}

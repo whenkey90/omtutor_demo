@@ -1,0 +1,22 @@
+#spring:
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/omtutor
+#    username: postgres
+#    password: admin
+#
+#  jpa:
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#    show-sql: true
+#    hibernate :
+#        ddl-auto: update
+spring:
+  datasource:
+    url: jdbc:mysql://13.127.139.165:3306/testdb
+    username: svenkat
+    password: 5Venkat@123
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
+    hibernate :
+        ddl-auto: update

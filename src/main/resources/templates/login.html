@@ -1,5 +1,36 @@
 <div th:fragment="content">
-  <div id="loginform">
+  <!--start-banner-->
+  <div class="banner">
+    <div class="container">
+      <div id="inner_container">
+        <div class="venkatesh">Login to your account</div>
+        <div id="login_wrapper">
+          <h3 th:text="${error}" ></h3>
+          <h3 th:text="${message}" ></h3>
+
+          <form th:action="@{/login}" method="POST" name="login" autocomplete="off">
+            <p>
+              <label for="login_email">Enter Registered E-Mail</label>
+              <input name="username" type="text" id="login_email" />
+            </p>
+            <p>
+              <label for="login_pwd">Enter Password</label>
+              <input name="password" type="password" id="login_pwd" />
+            </p>
+            <br/>
+            <p>
+              <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+              <input type="submit" name="login_submit" id="login_submit" value="Submit" />
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--//end-banner-->
+
+<!--<div id="loginform">
     <h3 th:text="${error}" ></h3>
     <h3 th:text="${message}" ></h3>
     <form th:action="@{/login}" method="POST" name="login" autocomplete="off">
@@ -18,15 +49,14 @@
         <tr>
           <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
           <td><input type="submit" value="submit"/></td>
-          <!--<td><a href="LoginSuccess.html">LoginSuccess/</a></td>-->
-          <!--<td><a href="LoginFailed.html">\LoginFailed</a></td>-->
+          &lt;!&ndash;<td><a href="LoginSuccess.html">LoginSuccess/</a></td>&ndash;&gt;
+          &lt;!&ndash;<td><a href="LoginFailed.html">\LoginFailed</a></td>&ndash;&gt;
           <td>&nbsp;
             <input type="reset"/></td>
         </tr>
         </tbody>
       </table>
     </form>
-  </div>
-  <div id="registerlink"> Don't have UserID? <a href="RegistrationPage.html">Register Here.</a></div>
-</div>
+    <div id="registerlink"> Don't have UserID? <a href="RegistrationPage.html">Register Here.</a></div>
+  </div>-->
 

@@ -1,0 +1,559 @@
+<div th:fragment="content">
+
+    <div class="bs-example">
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" data-target="#navbarCollapse"
+							data-toggle="collapse" class="navbar-toggle">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="index.html" class="navbar-brand">Om Tutor</a>
+				</div>
+
+				<div id="navbarCollapse" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="index.html">
+								<i class="fa fa-home m-r-5" aria-hidden="true"></i>
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="feedback.html">
+								<i class="fa fa-thumbs-o-up m-r-5" aria-hidden="true"></i>
+								Feedback
+							</a>
+						</li>
+						<li class="dropdown level-dropdown" style="position: absolute;">
+							<span>
+								<a href="#" data-toggle="dropdown"
+								   class="dropdown-toggle user-logout-btn">
+								<i class="fa fa-user-circle-o f-35" aria-hidden="true"></i>
+								<b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="setting.html">
+											<i class="fa fa-cogs m-r-5" aria-hidden="true"></i> 
+											Setting
+										</a>
+									</li>
+									<li>
+										<a href="https://omtutor.com/stdnpage.php?doLogout=true&amp;regn_email=a@a&amp;grp_id=stdn_grp">
+											<i class="fa fa-sign-out m-r-5" aria-hidden="true"></i> 
+											Logout
+										</a>
+									</li>
+								</ul>
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="user-level-container">
+			<div id="home" class="header">
+				<div class="panel panel-default m-b-0">
+					<div class="panel-heading">
+						<b>Welcome to Level 0</b>
+						<div class="dropdown level-dropdown">
+							<a href="#" data-toggle="dropdown"
+							   class="dropdown-toggle m-r-10">Choose Level <b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a id="cl-0" href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#">
+										Level:  0
+									</a>
+								</li>
+								<li>
+									<a id="cl-2" href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#">
+										Level: 1 - 4
+									</a>
+								</li>
+								<li>
+									<a id="cl-4" href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#">
+										Level: 5 - 8
+									</a>
+								</li>
+								<li>
+									<a id="cl-8" href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#">
+										Level: 9 &gt;
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel-body p-0">
+						<div class="header-top">
+							<div class="row">
+								<script>
+									$("span.menu").click(function() {
+										$(".top-menu").slideToggle("slow", function() {
+										});
+									});
+								</script>
+							</div>
+
+							<div class="banner">
+								<div class="container col-lg-12 col-md-12 col-sm-12 col-xs-12 p-0">
+									<div id="inner_container">
+										<div id="div_level0" style="display: block;">
+											<div id="TabbedPanels1" class="TabbedPanels">
+												<ul class="TabbedPanelsTabGroup level-left-tab">
+													<li class="TabbedPanelsTab TabbedPanelsTabSelected" tabindex="0">
+														<i class="fa fa-keyboard-o" aria-hidden="true"></i> Letters/Numbers
+													</li>
+													<li class="TabbedPanelsTab" tabindex="0">
+														<i class="fa fa-object-group" aria-hidden="true"></i> Art
+													</li>
+													<li class="TabbedPanelsTab" tabindex="0">
+														<i class="fa fa-eye" aria-hidden="true"></i> Show Drawings
+													</li>
+												</ul>
+												<div class="TabbedPanelsContentGroup">
+													<div class="TabbedPanelsContent TabbedPanelsContentVisible"
+														 style="display: block;">
+														<div id="main-wrapper">
+															<div id="level0-css-style">
+																<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p-0">
+																	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+																		<div class="outer-div-01" float="left">
+																						<div class="controls-01">
+																							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p-0">
+																								<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#"
+																								   name="Color-Red-01" id="Color-Red-01" class="l01_canvas btn-red">
+																									Red
+																								</a> &nbsp;
+																								<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#"
+																								   name="Color-Blue-01" id="Color-Blue-01" class="l01_canvas btn-blue">
+																									Blue
+																								</a> &nbsp;
+																								<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#"
+																								   name="Color-Green-01" id="Color-Green-01" class="l01_canvas btn-green">
+																									Green
+																								</a> &nbsp;
+																								<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#"
+																								   name="Color-Black-01" id="Color-Black-01" class="l01_canvas btn-black">
+																									Black
+																								</a> &nbsp; 
+																								<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#"
+																								   name="Draw-Freehand-01" id="Draw-Freehand-01" class="l01_canvas">
+																									<i class="fa fa-hand-pointer-o" aria-hidden="true"></i> Freehand
+																								</a> &nbsp;
+																								<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#"
+																								   name="Draw-StraightLines-01" id="Draw-StraightLines-01" class="l01_canvas">
+																									<i class="fa fa-minus" aria-hidden="true"></i> StraightLines
+																								</a> &nbsp;
+																							</div>
+																						</div>
+																						<div id="DrawingArea"
+																							 style="border:1px solid; width:500px; height:238px; margin-top:5px">
+																							<canvas id="drawing-canvas-01" width="500" height="200" style="cursor: pointer;">
+																								Your browser does not support Canvas HTML element.
+																							</canvas>
+																						</div>																						
+																					</div>
+																		
+																		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p-0 m-t-10">
+																			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+																				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 form-group">
+																					<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#"
+																					   name="Cmd-clear-01" id="Cmd-clear-01" class="btn btn-default l01_canvas form-control">
+																						<i class="fa fa-eraser" aria-hidden="true"></i> Clear
+																					</a>
+																				</div>
+																				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 form-group">
+																					<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#"
+																					   name="Cmd-undo-01" id="Cmd-undo-01" class="btn btn-default l01_canvas form-control">
+																						<i class="fa fa-undo" aria-hidden="true"></i> Undo
+																					</a>
+																				</div>
+																				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 form-group">
+																					<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#"
+																					   name="Cmd-redo-01" id="Cmd-redo-01" class="btn btn-default l01_canvas form-control">
+																						<i class="fa fa-repeat" aria-hidden="true"></i> Redo
+																					</a>
+																				</div>
+																			</div>
+																			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+																				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 form-group align-item-left">
+																					<label for="Opt-gridBox-01">Grid:</label>
+																					<input type="checkbox" name="Opt-gridBox-01"
+																					   id="Opt-gridBox-01" class="l01_canvas"/>
+																				</div>
+																				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 form-group align-item-left">
+																					<label for="Opt-traceBox-01">Trace:</label>
+																					<input type="checkbox" name="Opt-traceBox-01"
+																					   id="Opt-traceBox-01" class="l01_canvas"/>
+																				</div>
+																				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 form-group">
+																					<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#"
+																					   name="Spl-verify-01" id="Spl-verify-01" class="l01_canvas form-control">
+																						VERIFY
+																					</a>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+																		<div>
+																			<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Number_0" name="Number_0" class="level0_1">0</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Number_1" name="Number_1" class="level0_1">1</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Number_2" name="Number_2" class="level0_1">2</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Number_3" name="Number_3" class="level0_1">3</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Number_4" name="Number_4" class="level0_1">4</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Number_5" name="Number_5" class="level0_1">5</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Number_6" name="Number_6" class="level0_1">6</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Number_7" name="Number_7" class="level0_1">7</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Number_8" name="Number_8" class="level0_1">8</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Number_9" name="Number_9" class="level0_1">9</a> &nbsp;&nbsp;									<br/>
+																			<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_a" name="Letter_a" class="level0_1">a</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_b" name="Letter_b" class="level0_1">b</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_c" name="Letter_c" class="level0_1">c</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_d" name="Letter_d" class="level0_1">d</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_e" name="Letter_e" class="level0_1">e</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_f" name="Letter_f" class="level0_1">f</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_g" name="Letter_g" class="level0_1">g</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_h" name="Letter_h" class="level0_1">h</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_i" name="Letter_i" class="level0_1">i</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_j" name="Letter_j" class="level0_1">j</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_k" name="Letter_k" class="level0_1">k</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_l" name="Letter_l" class="level0_1">l</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_m" name="Letter_m" class="level0_1">m</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_n" name="Letter_n" class="level0_1">n</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_o" name="Letter_o" class="level0_1">o</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_p" name="Letter_p" class="level0_1">p</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_q" name="Letter_q" class="level0_1">q</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_r" name="Letter_r" class="level0_1">r</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_s" name="Letter_s" class="level0_1">s</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_t" name="Letter_t" class="level0_1">t</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_u" name="Letter_u" class="level0_1">u</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_v" name="Letter_v" class="level0_1">v</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_w" name="Letter_w" class="level0_1">w</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_x" name="Letter_x" class="level0_1">x</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_y" name="Letter_y" class="level0_1">y</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_z" name="Letter_z" class="level0_1">z</a> &nbsp;&nbsp;									<br/>
+																			<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_A" name="Letter_A" class="level0_1">A</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_B" name="Letter_B" class="level0_1">B</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_C" name="Letter_C" class="level0_1">C</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_D" name="Letter_D" class="level0_1">D</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_E" name="Letter_E" class="level0_1">E</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_F" name="Letter_F" class="level0_1">F</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_G" name="Letter_G" class="level0_1">G</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_H" name="Letter_H" class="level0_1">H</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_I" name="Letter_I" class="level0_1">I</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_J" name="Letter_J" class="level0_1">J</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_K" name="Letter_K" class="level0_1">K</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_L" name="Letter_L" class="level0_1">L</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_M" name="Letter_M" class="level0_1">M</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_N" name="Letter_N" class="level0_1">N</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_O" name="Letter_O" class="level0_1">O</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_P" name="Letter_P" class="level0_1">P</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_Q" name="Letter_Q" class="level0_1">Q</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_R" name="Letter_R" class="level0_1">R</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_S" name="Letter_S" class="level0_1">S</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_T" name="Letter_T" class="level0_1">T</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_U" name="Letter_U" class="level0_1">U</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_V" name="Letter_V" class="level0_1">V</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_W" name="Letter_W" class="level0_1">W</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_X" name="Letter_X" class="level0_1">X</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_Y" name="Letter_Y" class="level0_1">Y</a> &nbsp;&nbsp;<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" id="Letter_Z" name="Letter_Z" class="level0_1">Z</a> &nbsp;&nbsp;
+																		</div>
+																	</div>
+																</div>
+																<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">																	
+																	<p> </p>
+																	
+																	<p></p>
+																	<p>
+																		Write: </p><div name="char2draw" id="char2draw" class="result_01"></div>
+																	<p></p>
+																	<p>
+																		Wrote: </p><div name="responseText" id="responseText" class="result_01"></div>
+																	<p></p>
+																	<p>
+																		Result: </p><div name="checkResult" id="checkResult" class="result_01"></div>
+																	<p></p>
+																</div>
+															</div>
+														</div>
+														<script type="text/javascript" src="./js/level0_1.js"></script>
+													</div>
+													
+													<div class="TabbedPanelsContent" style="display: none;">
+														<div id="main-wrapper">
+															<div id="level0-css-style">
+																<table>
+																	<tbody>
+																	<tr>
+																		<td>
+																			<div class="outer-div-02" float="left">
+																				<div class="controls-02">
+																					<table>
+																						<tbody>
+																						<tr>
+																							<td><a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" name="Color-Red-02" id="Color-Red-02" class="l02_canvas">Red</a> &nbsp; <a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" name="Color-Blue-02" id="Color-Blue-02" class="l02_canvas">Blue</a> &nbsp; <a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" name="Color-Green-02" id="Color-Green-02" class="l02_canvas">Green</a> &nbsp; <a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" name="Color-Black-02" id="Color-Black-02" class="l02_canvas">Black</a>&nbsp; </td>
+																							<td><a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" name="Draw-Freehand-02" id="Draw-Freehand-02" class="l02_canvas">Freehand</a> &nbsp; <a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" name="Draw-StraightLines-02" id="Draw-StraightLines-02" class="l02_canvas">StraightLines</a></td>
+																						</tr>
+																						</tbody>
+																					</table>
+																				</div>
+																				<div id="DrawingArea" style="border:1px solid; padding: 3px; width:500px; height:200px; margin-top:5px">
+																					<canvas id="drawing-canvas-02" width="500" height="200" style="cursor: pointer;">
+																						Your browser does not support Canvas HTML element.
+																					</canvas>
+																				</div>
+																				<div class="controls">
+																					<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" name="Cmd-clear-02" id="Cmd-clear-02" class="l02_canvas">Clear</a>
+																					<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" name="Cmd-undo-02" id="Cmd-undo-02" class="l02_canvas">Undo</a>
+																					<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" name="Cmd-redo-02" id="Cmd-redo-02" class="l02_canvas">Redo</a>
+																					&nbsp; Grid:
+																					<input type="checkbox" name="Opt-gridBox-02" id="Opt-gridBox-02" class="l02_canvas"/>
+																					&nbsp; Trace:
+																					<input type="checkbox" name="Opt-traceBox-02" id="Opt-traceBox-02" class="l02_canvas"/>
+																					&nbsp;
+																					&nbsp;
+																					<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" name="Spl-SMArt-02" id="Spl-SMArt-02" class="l02_canvas">Save My Art</a>
+																				</div>
+																				<p></p>
+																				<div>
+																					<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" name="Nav-first-02" id="Nav-first-02" class="l02_canvas">First</a>
+																					<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" name="Nav-previous-02" id="Nav-previous-02" class="l02_canvas">Previous</a>
+																					<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" name="Nav-next-02" id="Nav-next-02" class="l02_canvas">Next</a>
+																					<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" name="Nav-last-02" id="Nav-last-02" class="l02_canvas">Last</a>
+																				</div>
+																				<p></p>
+																				<p>
+																					Server Response: </p><div name="responseText" id="responseText" class="result_01"></div>
+																				<p></p>
+																				<p>
+																					Message:
+																				</p>
+																				<div name="checkResult" id="checkResult" class="result_01">
+																				</div>
+																				<p></p>
+																				<div id="DrawingArea">
+																					<canvas id="display-canvas-02" width="500" height="200">
+																						Your browser does not support Canvas HTML element.
+																					</canvas>
+																				</div>
+																			</div>
+																		</td>
+																	</tr>
+																	</tbody>
+																</table>
+															</div>
+														</div>
+														<script src="./js/level0_2.js"></script>
+													</div>
+
+													<div class="TabbedPanelsContent" style="display: none;">
+														<script type="text/javascript" src="./js/console.js"></script>
+														<script type="text/javascript" src="./js/jsketch.js"></script>
+														<script type="text/javascript" src="./js/jquery.sketchable.js"></script>
+														<script type="text/javascript" src="./js/jquery.sketchable.memento.js"></script>
+														<script type="text/javascript" src="./js/plugins.js"></script>
+
+														<div id="main-wrapper">
+															<div id="level0-css-style">
+																<table>
+																	<tbody><tr>
+																		<td>
+																			<div class="app draw pull-left">
+																				<div id="DrawingArea" style="border:1px solid; padding: 3px; width:500px; height:200px; margin-top:5px">
+																					<canvas id="display-drawings-03" width="500" height="200">
+																						Your browser does not support Canvas HTML element.
+																					</canvas>
+																				</div>
+																				<p>
+																				</p>
+																				<div>
+																					<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" name="Nav-first-03" id="Nav-first-03" class="l03_canvas">First</a>
+																					<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" name="Nav-previous-03" id="Nav-previous-03" class="l03_canvas">Previous</a>
+																					<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" name="Nav-next-03" id="Nav-next-03" class="l03_canvas">Next</a>
+																					<a href="https://omtutor.com/stdnpage.php?regn_email=a@a&amp;grp_id=stdn_grp#" name="Nav-last-03" id="Nav-last-03" class="l03_canvas">Last</a>
+																				</div>
+																				<p></p>
+																				<p></p>
+																				<div name="responseText" id="responseText" class="result_03"></div>
+																				<p></p>
+																			</div>
+																		</td>
+																	</tr>
+																	</tbody>
+																</table>
+															</div>
+														</div>
+														<script src="./js/level0_3.js"></script>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div id="div_level2">
+											<iframe id="level0" src="./pages/mypage1.html"></iframe>
+										</div>
+										<div id="div_level4">
+											<iframe id="level0" src="./pages/levels5to8.html">
+												&lt;div id="Tab_level14" class="TabbedPanels"&gt;
+												&lt;ul class="TabbedPanelsTabGroup"&gt;
+												&lt;li class="TabbedPanelsTab" tabindex="0"&gt;Tab 1&lt;/li&gt;
+												&lt;li class="TabbedPanelsTab" tabindex="0"&gt;Tab 2&lt;/li&gt;
+												&lt;/ul&gt;
+												&lt;div class="TabbedPanelsContentGroup"&gt;
+												&lt;div class="TabbedPanelsContent"&gt;Content 1&lt;/div&gt;
+												&lt;div class="TabbedPanelsContent"&gt;Content 2&lt;/div&gt;
+												&lt;/div&gt;
+												&lt;/div&gt;
+											</iframe>
+										</div>
+										<div id="div_level8" style="">
+											<div class="TabbedPanelsContent">
+												<iframe id="level0" src="./pages/uploadProblem.html"></iframe>
+											</div>
+										</div>
+									</div>
+
+									<script>
+										  $("#cl-0").click(function(e) {
+											e.preventDefault();
+											$("#div_level0").slideDown(200);
+											$("#div_level2").slideUp(200);
+											$("#div_level4").slideUp(200);
+											$("#div_level8").slideUp(200);
+										  });
+		
+										  $("#cl-2").click(function(e) {
+											e.preventDefault();
+											$("#div_level0").slideUp(200);
+											$("#div_level4").slideUp(200);
+											$("#div_level8").slideUp(200);
+											$("#div_level2").slideDown(200);
+										  });
+		
+										  $("#cl-4").click(function(e) {
+											e.preventDefault();
+											$("#div_level2").slideUp(200);
+											$("#div_level0").slideUp(200);
+											$("#div_level8").slideUp(200);
+											$("#div_level4").slideDown(200);
+										  });
+										  $("#cl-8").click(function(e) {
+											e.preventDefault();
+											$("#div_level2").slideUp(200);
+											$("#div_level4").slideUp(200);
+											$("#div_level0").slideUp(200);
+											$("#div_level8").slideDown(200);
+										  });
+									</script>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer">
+					<div class="footer-bottom">
+						<p class="f-13">Copyright © 2016-2018 OMTutor.com</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <link rel="stylesheet" href="./css/swipebox.css"/>
+    <script src="./js/jquery.swipebox.min.js"></script>
+    <script type="text/javascript">
+		jQuery(function($) {
+			$(".swipebox").swipebox();
+		});
+    </script>
+
+	<!-- Complete info Modal Start -->
+    <div id="logindiv">
+		<form class="form wrap-login100-reg m-t-50 registration-form" role="form" action="#" id="login">
+			<i class="fa fa-times-circle-o close-btn" aria-hidden="true" id="cancel"></i>
+			<div class="form-top text-center p-0">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p-b-20 text-center">
+					<h4 class="font-bold">Registration</h4>
+				</div>
+			</div>
+			<div class="form-bottom bg-white p-0 m-t-10">
+				<div class="form-group">
+					<select class="selectpicker form-control p-t-5 select-level">
+						<option hidden="true">Select level</option>
+						<option>One</option>
+						<option>Two</option>
+						<option>Three</option>
+						<option>Four</option>
+						<option>Five</option>
+						<option>Six</option>
+						<option>Seven</option>
+						<option>Eight</option>
+						<option>Nine</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label class="sr-only" for="form-school-name">School name</label>
+					<input type="text" name="form-school-name"
+						   placeholder="School name..."
+						   class="form-school-name form-control"
+						   id="form-school-name"/>
+				</div>
+				<div class="form-group">
+					<label class="sr-only" for="form-display-name">Display name</label>
+					<input type="text" name="form-display-name"
+						   placeholder="Display name..."
+						   class="form-display-name form-control"
+						   id="form-display-name"/>
+				</div>
+				<div class="form-group">
+					<label class="sr-only" for="form-mobile-number-one">Mobile number 1</label>
+					<input type="text" name="form-mobile-number-one"
+						   placeholder="Mobile number one..."
+						   class="form-mobile-number-one form-control"
+						   id="form-mobile-number-one"/>
+				</div>
+				<div class="form-group">
+					<label class="sr-only" for="form-mobile-number-two">Mobile number 2</label>
+					<input type="text" name="form-mobile-number-two"
+						   placeholder="Mobile number two..."
+						   class="form-mobile-number-two form-control"
+						   id="form-mobile-number-two"/>
+				</div>
+				<div class="form-group">
+					<label class="sr-only" for="form-preferred-email">Preferred email</label>
+					<input type="text" name="form-preferred-email"
+						   placeholder="Preferred email..."
+						   class="form-preferred-email form-control"
+						   id="form-preferred-email"/>
+				</div>
+				<div class="form-group">
+					<label class="sr-only" for="form-other-email">Other email</label>
+					<input type="text" name="form-other-email"
+						   placeholder="Other email..."
+						   class="form-other-email form-control"
+						   id="form-other-email"/>
+				</div>
+				<div class="form-group align-v-h-center">
+					<button type="button" class="btn btn-previous m-5 login100-form-btn">
+						UPDATE
+					</button>
+					<button type="submit" class="btn pull-right m-5 login100-form-btn" id="skip">
+						SKIP
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<!-- Complete info Modal End -->
+
+	<!-- Click to Top Start-->
+    <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
+	<!-- Click to Top end-->
+	
+    <script type="text/javascript">
+		var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
+		var TabbedPanels3 = new Spry.Widget.TabbedPanels("Tab_level14");
+	</script>
+    <script src="js/main.js"></script>
+    <script>
+		$(document).ready(function() {
+			setTimeout(popup, 50);
+			function popup() {
+				$("#logindiv").css("display", "block");
+				}
+				$("#login #cancel").click(function() {
+					$(this).parent().parent().hide();
+				});
+				$("#onclick").click(function() {
+					$("#contactdiv").css("display", "block");
+				});
+				$("#skip").click(function() {
+					$("#logindiv").css("display", "none");
+				});
+				
+				
+				if ($('#back-to-top').length) {
+					var scrollTrigger = 100, // px
+						backToTop = function () {
+							var scrollTop = $(window).scrollTop();
+							if (scrollTop > scrollTrigger) {
+								$('#back-to-top').addClass('show');
+							} else {
+								$('#back-to-top').removeClass('show');
+							}
+						};
+					backToTop();
+					$(window).on('scroll', function () {
+						backToTop();
+					});
+					$('#back-to-top').on('click', function (e) {
+						e.preventDefault();
+						$('html,body').animate({
+							scrollTop: 0
+						}, 700);
+					});
+				}
+				
+			});
+	</script>
+    <script>
+		$(document).ready(function () {
+			jQuery('body').bind('click', function(e) {
+			if(jQuery(e.target).closest('.navbar').length == 0) {
+				var opened = jQuery('.navbar-collapse').hasClass('collapse in');
+				if ( opened === true ) {
+					jQuery('.navbar-collapse').collapse('hide');
+					}
+				}
+			});
+		});
+	</script>
+</div>
